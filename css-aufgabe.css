@@ -1,0 +1,72 @@
+body {
+  font: 100%/1.5 Verdana, Geneva, sans-serif;
+  /* Die Hexcodes der Farben habe ich über einen Color-Picker ermittelt*/
+  background: #d1d1d1;
+  color: #000;
+  margin: 0;
+}
+
+.holder{
+  /* Das liquid layout wird auch hier mit der Maximalbreite von 960px eingestellt */
+  max-width: 60rem;
+  /*Der Hintergrund des Containers hat diesen Gelbton,
+  da ich den Teil unter Nav nicht als extra Item ansehe,
+  sonder das Gelb vom Div-Hintergrund hervor kommt, da das Nav-item
+  in seiner Höhe auf den Inhalt beschränkt ist.*/
+  background: #fdffa9;
+  /*Der Div Container wird zur Flexbox, da ich ja ein Flexitem darin (nav)
+  auf der Hauptachse nach rechts verschieben möchte bzw.
+  ich die Reihenfolge einfach umdrehe (flex-direction: row reverse)*/
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 auto;
+}
+
+main {
+  background: #98d474;
+  /*Feste, relative Breite von 80% für Main-Item*/
+  flex-basis: 80%;
+  padding: 1rem;
+}
+/* Die beiden Textgröße habe ich so lange getestet, bis der Zeilenumbruch bei voller Breite (60rem)
+dem der Abbildung entsprochen hat*/
+.grosstext {
+  font-size: 1.1rem;
+}
+.kleintext {
+  font-size: 0.8rem;
+}
+
+nav {
+  background: #869dcf;
+  /* dementsprechende relative Breite für nav-item von 20% */
+  flex-basis: 20%;
+  /*Höhe des Nav-Items beschränken auf den enthaltenen Content*/
+  height: fit-content;
+
+}
+
+nav ul {
+  padding-left: 0.5rem;
+}
+
+nav li {
+  /* Innenabstand solange angepasst, bis unter blaue Kante dem Wort gubergren
+  auf selber Höhe begegnet wie in der Abbildung */
+  padding: 0.7rem;
+  list-style-type: none;
+}
+
+nav a:link {
+  display: block;
+  border: thin solid white;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.15rem;
+
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
